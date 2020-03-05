@@ -15,6 +15,13 @@
 		92C50372240CEB3D00CBFBC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92C50370240CEB3D00CBFBC6 /* LaunchScreen.storyboard */; };
 		92C5037D240CEB3D00CBFBC6 /* Realm_LearningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C5037C240CEB3D00CBFBC6 /* Realm_LearningTests.swift */; };
 		92C50388240CEB3D00CBFBC6 /* Realm_LearningUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C50387240CEB3D00CBFBC6 /* Realm_LearningUITests.swift */; };
+		92C503E02411264D00CBFBC6 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C503D62411264D00CBFBC6 /* APIError.swift */; };
+		92C503E12411264D00CBFBC6 /* GenericAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C503D72411264D00CBFBC6 /* GenericAPIClient.swift */; };
+		92C503E22411264D00CBFBC6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C503D82411264D00CBFBC6 /* Result.swift */; };
+		92C503E32411264D00CBFBC6 /* HTTPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C503D92411264D00CBFBC6 /* HTTPHeader.swift */; };
+		92C503E42411264D00CBFBC6 /* HTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C503DA2411264D00CBFBC6 /* HTTPMethods.swift */; };
+		92C503E52411264D00CBFBC6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C503DB2411264D00CBFBC6 /* Endpoint.swift */; };
+		92C503E62411264D00CBFBC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92C503DE2411264D00CBFBC6 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		92C50383240CEB3D00CBFBC6 /* Realm_LearningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Realm_LearningUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C50387240CEB3D00CBFBC6 /* Realm_LearningUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm_LearningUITests.swift; sourceTree = "<group>"; };
 		92C50389240CEB3D00CBFBC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92C503D62411264D00CBFBC6 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		92C503D72411264D00CBFBC6 /* GenericAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericAPIClient.swift; sourceTree = "<group>"; };
+		92C503D82411264D00CBFBC6 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		92C503D92411264D00CBFBC6 /* HTTPHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPHeader.swift; sourceTree = "<group>"; };
+		92C503DA2411264D00CBFBC6 /* HTTPMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethods.swift; sourceTree = "<group>"; };
+		92C503DB2411264D00CBFBC6 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		92C503DE2411264D00CBFBC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +113,9 @@
 		92C50364240CEB3700CBFBC6 /* Realm_Learning */ = {
 			isa = PBXGroup;
 			children = (
+				92C503DE2411264D00CBFBC6 /* Assets.xcassets */,
+				92C503DF2411264D00CBFBC6 /* Model */,
+				92C503D42411264D00CBFBC6 /* WebServiceHelper */,
 				92C50365240CEB3700CBFBC6 /* AppDelegate.swift */,
 				92C50367240CEB3700CBFBC6 /* SceneDelegate.swift */,
 				92C50369240CEB3700CBFBC6 /* ViewController.swift */,
@@ -126,6 +143,50 @@
 				92C50389240CEB3D00CBFBC6 /* Info.plist */,
 			);
 			path = Realm_LearningUITests;
+			sourceTree = "<group>";
+		};
+		92C503D42411264D00CBFBC6 /* WebServiceHelper */ = {
+			isa = PBXGroup;
+			children = (
+				92C503D52411264D00CBFBC6 /* Networking */,
+				92C503DC2411264D00CBFBC6 /* Client */,
+			);
+			path = WebServiceHelper;
+			sourceTree = "<group>";
+		};
+		92C503D52411264D00CBFBC6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				92C503D62411264D00CBFBC6 /* APIError.swift */,
+				92C503D72411264D00CBFBC6 /* GenericAPIClient.swift */,
+				92C503D82411264D00CBFBC6 /* Result.swift */,
+				92C503D92411264D00CBFBC6 /* HTTPHeader.swift */,
+				92C503DA2411264D00CBFBC6 /* HTTPMethods.swift */,
+				92C503DB2411264D00CBFBC6 /* Endpoint.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		92C503DC2411264D00CBFBC6 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				92C503DD2411264D00CBFBC6 /* Authenticate */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		92C503DD2411264D00CBFBC6 /* Authenticate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Authenticate;
+			sourceTree = "<group>";
+		};
+		92C503DF2411264D00CBFBC6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +295,7 @@
 			files = (
 				92C50372240CEB3D00CBFBC6 /* LaunchScreen.storyboard in Resources */,
 				92C5036F240CEB3D00CBFBC6 /* Assets.xcassets in Resources */,
+				92C503E62411264D00CBFBC6 /* Assets.xcassets in Resources */,
 				92C5036D240CEB3700CBFBC6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,8 +321,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92C503E42411264D00CBFBC6 /* HTTPMethods.swift in Sources */,
+				92C503E52411264D00CBFBC6 /* Endpoint.swift in Sources */,
+				92C503E22411264D00CBFBC6 /* Result.swift in Sources */,
 				92C5036A240CEB3700CBFBC6 /* ViewController.swift in Sources */,
+				92C503E02411264D00CBFBC6 /* APIError.swift in Sources */,
 				92C50366240CEB3700CBFBC6 /* AppDelegate.swift in Sources */,
+				92C503E12411264D00CBFBC6 /* GenericAPIClient.swift in Sources */,
+				92C503E32411264D00CBFBC6 /* HTTPHeader.swift in Sources */,
 				92C50368240CEB3700CBFBC6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
