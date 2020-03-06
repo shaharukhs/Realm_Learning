@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import RealmSwift
 
 protocol MoviesListViewModelInput {
     func viewDidLoad()
@@ -43,11 +43,23 @@ final class DefaultUserListViewModel: UserListViewModel {
     private func appendPage(userData: UsersResponseModel) {
         self.currentPage = userData.page ?? 0
         self.totalPageCount = userData.totalPages ?? 1
-        self.items.value = items.value + userData.data.map { $0 }!
+        self.items.value = items.value + userData.data.map { $0 }
         
         print("UserData Start")
         print(userData)
         print("UserData End")
+        
+        // Get the default Realm
+        let realm = try! Realm()
+        
+
+        // Persist your data easily
+        try! realm.write {
+            realm.add(userData)
+        }
+        
+//        let localItems: UsersResponseModel = realm.
+//        print("Local Item :: ", localItems)
     }
     
     private func resetPages() {
